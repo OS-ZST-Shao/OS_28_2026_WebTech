@@ -136,6 +136,10 @@
     }
   }
 
+  #courseName{
+    background-color: blueviolet;
+  }
+
   @media (max-width: 1024px) {
     margin-top: 20px;
     flex-wrap: wrap;

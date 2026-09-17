@@ -6,72 +6,42 @@ import './App.css'
 
 function App() {
 
-  const app = {
-    name: "WebTech",
-    version: "1.0",
-    author: "Oskar Szatko",
-    technologiesCount: 3
-  };
-
-  const technology = {
-    name: "React",
-    category: "Frontend",
-    hours: 30,
-    active: true
-  };
-
-  const student = {
-    name: "Oskar",
-    surname: "Szatko",
-    className: "4P",
-    specialization: "technik programista"
-};
-
-const course = {
-  name: "Zaawansowane Aplikacje Webowe",
-  teacher: "Rafał Taraszka",
-  hours: 4,
-  completed: true
-};
-  function complete()
-  {
-    if(student.complete)
-    {
-      return "Ukończono"
-    }
-    else{
-      return "Nie ukończono"
-    }
+  function Header() {
+    return (
+      <header>
+        <h1>Header WebTech</h1>
+      </header>
+    )
   }
+
+  function Technology() {
+    return (
+      <section>
+        <h1>Section "Technology" WebTech</h1>
+      </section>
+    )
+  }
+
+  function Footer() {
+    return (
+      <footer>
+        <h1>Footer WebTech</h1>
+      </footer>
+    )
+  }
+
   return (
-    <div>
-
-      <h1>{app.name}</h1>
-
-      <p>Wersja: {app.version}</p>
-
-      <p>Autor: {app.author}</p>
-
-      <p>
-        Liczba technologii: {app.technologiesCount}
-      </p>
-
-      <h1>{technology.name}</h1>
-      <p>Kategoria: {technology.category}</p>
-      <p>Liczba godzin: {technology.hours}</p>
-      <br></br>
-      <p>Uczeń: {student.name + " " + student.surname}</p>
-      <p>Klasa: {student.className}</p>
-      <p>Kierunek: {student.specialization}</p>
-
-    <br></br>
-    <section className='kurs'>
-      <h2>{course.name}</h2>
-      <p>Nauczyciel: {course.teacher}</p>
-      <p>Liczba godzin: {course.hours}</p>
-      <p>Czy ukończono: {complete()}</p>
-    </section>
-    </div>
+    <>
+      <Header />
+      <Header />
+      <Header />
+      <Header />
+      <Header />
+      <Header />
+      <Header />
+      <Technology />
+      <Footer />
+    </>
   );
 }
 

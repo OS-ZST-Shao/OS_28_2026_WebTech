@@ -11,7 +11,6 @@ import InfoBox from './components/InfoBox.jsx'
 import Navigation from './components/Navigation.jsx'
 import CourseCard from './components/CourseCard.jsx'
 import TechnologiesList from './components/TechnologiesList.jsx'
-import StudentCard from './components/StudentCard.jsx'
 
 
 
@@ -20,23 +19,9 @@ function App() {
   const specyfication = {language:"JavaScript", type:"Frontend"};
   const features =["Komponenty", "JSX", "Props"];
 
-  const studentOne = {
-    id: 1,
-    firstName: "Jan",
-    lastName: "Kowalski",
-    className: "4P",
-    specialization: "technik programista",
-    gradesAverage: 4.75,
-    isActive: true
-  };
-
   return (
     <>
       <Header />
-      <br />
-      
-      <StudentCard student={studentOne} />
-
       <br />
       <Technology name="React" category="Frontend" hours={105} spectfikacja={specyfication} cechy={features}  />
       <Technology name="PHP" category="Backend" hours={40} spectfikacja={specyfication} cechy={features} />

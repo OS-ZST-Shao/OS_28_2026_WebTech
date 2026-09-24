@@ -186,3 +186,14 @@
     border-right-color: var(--border);
   }
 }
+
+.naglowek2{
+  font-weight: bold;
+  color: black;
+  font-size: 1.3em;
+  padding: 1em 0 0 0;
+}
+.akapit{
+  color: black;
+  font-size: 1em;
+}

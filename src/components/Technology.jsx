@@ -1,11 +1,10 @@
  function Technology(props) {
     return (
       <section>
-        <h2 className="naglowek2">Sekcja: {props.name} </h2>
-        <p className="akapit">Zastosowanie: {props.category}</p>
+        <h2 className="naglowek2">Nazwa: {props.name} </h2>
+        <p className="akapit">Kategoria: {props.category}</p>
         <p className="akapit">Liczba godzin: {props.hours}</p>
-        <p className="akapit">Spectfikacja: {props.spectfikacja.language}</p>
-        <p className="akapit">Cechy: {props.cechy[2]}</p>
+        <br />
       </section>
     )
   }

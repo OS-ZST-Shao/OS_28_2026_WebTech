@@ -1,52 +1,42 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
-import Technology from './components/Technology.jsx'
-import Student from './components/Student.jsx'
-import InfoBox from './components/InfoBox.jsx'
-import Navigation from './components/Navigation.jsx'
-import CourseCard from './components/CourseCard.jsx'
-import TechnologiesList from './components/TechnologiesList.jsx'
-import StudentCard from './components/StudentCard.jsx'
-
-
+// import { useState } from "react";
+// import heroImg from "./assets/hero.png";
+// import reactLogo from "./assets/react.svg";
+// import viteLogo from "./assets/vite.svg";
+// import Footer from "./components/Footer.jsx";
+// import InfoBox from "./components/InfoBox.jsx";
+// import Navigation from "./components/Navigation.jsx";
+// import CourseCard from "./components/CourseCard.jsx";
+// import TechnologiesList from "./components/TechnologiesList.jsx";
+// import StudentCard from "./components/StudentCard.jsx";
+// import Student from "./components/Student.jsx";
+// import Book from "./components/Book.jsx";
+import "./App.css";
+import Header from "./components/Header.jsx";
+import Technology from "./components/Technology.jsx";
 
 function App() {
-
-  const specyfication = {language:"JavaScript", type:"Frontend"};
-  const features =["Komponenty", "JSX", "Props"];
-
-  const studentOne = {
-    id: 1,
-    firstName: "Jan",
-    lastName: "Kowalski",
-    className: "4P",
-    specialization: "technik programista",
-    gradesAverage: 4.75,
-    isActive: true
-  };
+  const technologies = [
+    { id: 1, name: "React", category: "Frontend",hours: 15 },
+    { id: 2, name: "JavaScript", category: "Frontend",hours: 10 },
+    { id: 3, name: "Angular", category: "Frontend",hours: 5 },
+    { id: 4, name: "Express", category: "Backend",hours: 25 },
+    { id: 5, name: "MongoDB", category: "Baza danych",hours: 20 }
+  ];
 
   return (
     <>
       <Header />
       <br />
-      
-      <StudentCard student={studentOne} />
 
-      <br />
-      <Technology name="React" category="Frontend" hours={105} spectfikacja={specyfication} cechy={features}  />
-      <Technology name="PHP" category="Backend" hours={40} spectfikacja={specyfication} cechy={features} />
-      <Technology name="JavaScript" category="Frontend" hours={30} spectfikacja={specyfication} cechy={features} />
-      <Technology name="Angular" category="Frontend" hours={20} spectfikacja={specyfication} cechy={features} />
-      <Technology name="MySQL" category="Backend" hours={10} spectfikacja={specyfication} cechy={features} />
-      
+      {technologies.map((technology) => (
+        <Technology
+        key={technology.id}
+        name={technology.name}
+        category={technology.category}
+        hours={technology.hours} />
+      ))}
     </>
   );
 }
 
 export default App;
-

@@ -1,0 +1,43 @@
+// import { useState } from "react";
+// import heroImg from "./assets/hero.png";
+// import reactLogo from "./assets/react.svg";
+// import viteLogo from "./assets/vite.svg";
+// import Footer from "./components/Footer.jsx";
+// import Technology from "./components/Technology.jsx";
+// import InfoBox from "./components/InfoBox.jsx";
+// import Navigation from "./components/Navigation.jsx";
+// import CourseCard from "./components/CourseCard.jsx";
+// import TechnologiesList from "./components/TechnologiesList.jsx";
+// import StudentCard from "./components/StudentCard.jsx";
+import "./App.css";
+import Header from "./components/Header.jsx";
+import Student from "./components/Student.jsx";
+
+function App() {
+  const students = [
+    { id: 1, name: "Anna", className: "4P", age: 16,specialization: "Programista" },
+    { id: 2, name: "Jan", className: "4P", age: 17, specialization: "Programista"},
+    { id: 3, name: "Adam", className: "4P", age: 18, specialization: "Programista" },
+    { id: 3, name: "Waldemar", className: "4I", age: 19, specialization: "Informatyk" }
+  ];
+
+  return (
+    <>
+      <Header />
+      <br />
+
+      {students.map((student) => (
+        <Student 
+          key = {student.id}
+          name = {student.name}
+          className = {student.className}
+          age = {student.age}
+          specialization = {student.specialization}
+        />
+      ))}
+      
+    </>
+  );
+}
+
+export default App;

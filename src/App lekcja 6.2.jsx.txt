@@ -1,0 +1,45 @@
+// import { useState } from "react";
+// import heroImg from "./assets/hero.png";
+// import reactLogo from "./assets/react.svg";
+// import viteLogo from "./assets/vite.svg";
+// import Footer from "./components/Footer.jsx";
+// import InfoBox from "./components/InfoBox.jsx";
+// import Navigation from "./components/Navigation.jsx";
+// import CourseCard from "./components/CourseCard.jsx";
+// import TechnologiesList from "./components/TechnologiesList.jsx";
+// import StudentCard from "./components/StudentCard.jsx";
+// import Student from "./components/Student.jsx";
+// import Book from "./components/Book.jsx";
+// import Technology from "./components/Technology.jsx";
+import "./App.css";
+import Header from "./components/Header.jsx";
+import Product from "./components/Product.jsx";
+
+function App() {
+  const products = [
+    { id: 1, name: "Laptop", price: 2700 },
+    { id: 2, name: "Tablet", price: 1200 },
+    { id: 3, name: "Telefon", price: 1400 },
+  ];
+
+  function selectProduct(name) {
+    console.log("Wybrany produkt: " + name);
+  }
+
+  return (
+    <>
+      <Header />
+      <br />
+
+      {products.map((product) => (
+        <Product
+        key={product.id}
+        name={product.name}
+        price={product.price} 
+        onSelect={selectProduct}/>
+      ))}
+    </>
+  );
+}
+
+export default App;

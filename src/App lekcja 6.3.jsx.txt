@@ -1,0 +1,29 @@
+// import { useState } from "react";
+// import heroImg from "./assets/hero.png";
+// import reactLogo from "./assets/react.svg";
+// import viteLogo from "./assets/vite.svg";
+// import Footer from "./components/Footer.jsx";
+// import InfoBox from "./components/InfoBox.jsx";
+// import Navigation from "./components/Navigation.jsx";
+// import CourseCard from "./components/CourseCard.jsx";
+// import TechnologiesList from "./components/TechnologiesList.jsx";
+// import StudentCard from "./components/StudentCard.jsx";
+// import Student from "./components/Student.jsx";
+// import Book from "./components/Book.jsx";
+// import Technology from "./components/Technology.jsx";
+// import Product from "./components/Product.jsx";
+import "./App.css";
+import Header from "./components/Header.jsx";
+import User from "./components/User.jsx";
+
+function App() {
+  return (
+    <>
+      <Header />
+      <br />
+      <User name="Anna" role="Administrator" />
+    </>
+  );
+}
+
+export default App;
